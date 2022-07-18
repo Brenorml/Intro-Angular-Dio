@@ -6,20 +6,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error404/error-404.component';
 import { CourseModule } from './course/course.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,   
-    NavBarComponent,
     Error404Component    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CourseModule,
+    CoreModule,
     RouterModule.forRoot([      
       {
         path: '', redirectTo: 'courses', pathMatch: 'full'
